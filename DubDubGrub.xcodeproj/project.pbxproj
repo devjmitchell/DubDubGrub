@@ -16,6 +16,7 @@
 		D3B5DB51267CE1C00074A84D /* LocationMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB50267CE1C00074A84D /* LocationMapView.swift */; };
 		D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB52267CE1EB0074A84D /* LocationListView.swift */; };
 		D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB54267CE1FD0074A84D /* ProfileView.swift */; };
+		D3B5DB722682338F0074A84D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB712682338F0074A84D /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D3B5DB50267CE1C00074A84D /* LocationMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapView.swift; sourceTree = "<group>"; };
 		D3B5DB52267CE1EB0074A84D /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		D3B5DB54267CE1FD0074A84D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		D3B5DB712682338F0074A84D /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				D3B5DB50267CE1C00074A84D /* LocationMapView.swift */,
 				D3B5DB52267CE1EB0074A84D /* LocationListView.swift */,
 				D3B5DB54267CE1FD0074A84D /* ProfileView.swift */,
+				D3B5DB712682338F0074A84D /* LocationDetailView.swift */,
 			);
 			path = DubDubGrub;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 				D34263F6267CDBC600D743E7 /* DubDubGrubApp.swift in Sources */,
 				D3B5DB51267CE1C00074A84D /* LocationMapView.swift in Sources */,
 				D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */,
+				D3B5DB722682338F0074A84D /* LocationDetailView.swift in Sources */,
 				D3B5DB4F267CE1850074A84D /* AppTabView.swift in Sources */,
 				D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */,
 				D3B5DB4D267CE1240074A84D /* Color+Ext.swift in Sources */,

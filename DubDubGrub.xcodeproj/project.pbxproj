@@ -17,6 +17,11 @@
 		D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB52267CE1EB0074A84D /* LocationListView.swift */; };
 		D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB54267CE1FD0074A84D /* ProfileView.swift */; };
 		D3B5DB722682338F0074A84D /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B5DB712682338F0074A84D /* LocationDetailView.swift */; };
+		D3B9B295277F7ADE008FECFB /* LocationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B294277F7ADE008FECFB /* LocationCell.swift */; };
+		D3B9B297277F7B58008FECFB /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B296277F7B58008FECFB /* AvatarView.swift */; };
+		D3B9B299277F7E1C008FECFB /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B298277F7E1C008FECFB /* CustomModifiers.swift */; };
+		D3B9B29B277F7E5F008FECFB /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B29A277F7E5F008FECFB /* View+Ext.swift */; };
+		D3B9B29D277F811F008FECFB /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B29C277F811F008FECFB /* DDGButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +38,11 @@
 		D3B5DB52267CE1EB0074A84D /* LocationListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationListView.swift; sourceTree = "<group>"; };
 		D3B5DB54267CE1FD0074A84D /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		D3B5DB712682338F0074A84D /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		D3B9B294277F7ADE008FECFB /* LocationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationCell.swift; sourceTree = "<group>"; };
+		D3B9B296277F7B58008FECFB /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		D3B9B298277F7E1C008FECFB /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
+		D3B9B29A277F7E5F008FECFB /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
+		D3B9B29C277F811F008FECFB /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +77,13 @@
 		D34263F4267CDBC600D743E7 /* DubDubGrub */ = {
 			isa = PBXGroup;
 			children = (
+				D3B9B29E277F8291008FECFB /* Extensions */,
+				D3B9B29F277F82A6008FECFB /* Views */,
 				D3B5DB48267CDDA90074A84D /* DubDubGrub.entitlements */,
 				D34263F5267CDBC600D743E7 /* DubDubGrubApp.swift */,
 				D34263F9267CDBC600D743E7 /* Assets.xcassets */,
 				D34263FE267CDBC600D743E7 /* Info.plist */,
 				D34263FB267CDBC600D743E7 /* Preview Content */,
-				D3B5DB4C267CE1240074A84D /* Color+Ext.swift */,
-				D3B5DB4E267CE1850074A84D /* AppTabView.swift */,
-				D3B5DB50267CE1C00074A84D /* LocationMapView.swift */,
-				D3B5DB52267CE1EB0074A84D /* LocationListView.swift */,
-				D3B5DB54267CE1FD0074A84D /* ProfileView.swift */,
-				D3B5DB712682338F0074A84D /* LocationDetailView.swift */,
 			);
 			path = DubDubGrub;
 			sourceTree = "<group>";
@@ -96,6 +102,55 @@
 				D3B5DB4A267CDDCA0074A84D /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D3B9B29E277F8291008FECFB /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5DB4C267CE1240074A84D /* Color+Ext.swift */,
+				D3B9B29A277F7E5F008FECFB /* View+Ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3B9B29F277F82A6008FECFB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D3B9B298277F7E1C008FECFB /* CustomModifiers.swift */,
+				D3B9B2A2277F8325008FECFB /* CustomViews */,
+				D3B9B2A1277F8315008FECFB /* Cells */,
+				D3B9B2A0277F82AF008FECFB /* Screens */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D3B9B2A0277F82AF008FECFB /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5DB4E267CE1850074A84D /* AppTabView.swift */,
+				D3B5DB50267CE1C00074A84D /* LocationMapView.swift */,
+				D3B5DB52267CE1EB0074A84D /* LocationListView.swift */,
+				D3B5DB712682338F0074A84D /* LocationDetailView.swift */,
+				D3B5DB54267CE1FD0074A84D /* ProfileView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		D3B9B2A1277F8315008FECFB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D3B9B294277F7ADE008FECFB /* LocationCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		D3B9B2A2277F8325008FECFB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				D3B9B296277F7B58008FECFB /* AvatarView.swift */,
+				D3B9B29C277F811F008FECFB /* DDGButton.swift */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,11 +223,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				D34263F6267CDBC600D743E7 /* DubDubGrubApp.swift in Sources */,
+				D3B9B299277F7E1C008FECFB /* CustomModifiers.swift in Sources */,
 				D3B5DB51267CE1C00074A84D /* LocationMapView.swift in Sources */,
 				D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */,
 				D3B5DB722682338F0074A84D /* LocationDetailView.swift in Sources */,
 				D3B5DB4F267CE1850074A84D /* AppTabView.swift in Sources */,
 				D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */,
+				D3B9B29B277F7E5F008FECFB /* View+Ext.swift in Sources */,
+				D3B9B295277F7ADE008FECFB /* LocationCell.swift in Sources */,
+				D3B9B29D277F811F008FECFB /* DDGButton.swift in Sources */,
+				D3B9B297277F7B58008FECFB /* AvatarView.swift in Sources */,
 				D3B5DB4D267CE1240074A84D /* Color+Ext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

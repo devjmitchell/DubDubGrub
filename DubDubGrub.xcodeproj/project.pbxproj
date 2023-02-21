@@ -22,6 +22,7 @@
 		D3B9B299277F7E1C008FECFB /* CustomModifiers.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B298277F7E1C008FECFB /* CustomModifiers.swift */; };
 		D3B9B29B277F7E5F008FECFB /* View+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B29A277F7E5F008FECFB /* View+Ext.swift */; };
 		D3B9B29D277F811F008FECFB /* DDGButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B9B29C277F811F008FECFB /* DDGButton.swift */; };
+		D3E28D1229A5708000FF8952 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1129A5708000FF8952 /* DDGLocation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,7 @@
 		D3B9B298277F7E1C008FECFB /* CustomModifiers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomModifiers.swift; sourceTree = "<group>"; };
 		D3B9B29A277F7E5F008FECFB /* View+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Ext.swift"; sourceTree = "<group>"; };
 		D3B9B29C277F811F008FECFB /* DDGButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGButton.swift; sourceTree = "<group>"; };
+		D3E28D1129A5708000FF8952 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 		D34263F4267CDBC600D743E7 /* DubDubGrub */ = {
 			isa = PBXGroup;
 			children = (
+				D3E28D1029A5707400FF8952 /* Model */,
 				D3B9B29E277F8291008FECFB /* Extensions */,
 				D3B9B29F277F82A6008FECFB /* Views */,
 				D3B5DB48267CDDA90074A84D /* DubDubGrub.entitlements */,
@@ -153,6 +156,14 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		D3E28D1029A5707400FF8952 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D3E28D1129A5708000FF8952 /* DDGLocation.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +238,7 @@
 				D3B5DB51267CE1C00074A84D /* LocationMapView.swift in Sources */,
 				D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */,
 				D3B5DB722682338F0074A84D /* LocationDetailView.swift in Sources */,
+				D3E28D1229A5708000FF8952 /* DDGLocation.swift in Sources */,
 				D3B5DB4F267CE1850074A84D /* AppTabView.swift in Sources */,
 				D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */,
 				D3B9B29B277F7E5F008FECFB /* View+Ext.swift in Sources */,

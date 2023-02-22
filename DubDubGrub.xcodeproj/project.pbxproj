@@ -28,6 +28,7 @@
 		D3E28D1929A69F0500FF8952 /* CloudKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1829A69F0500FF8952 /* CloudKitManager.swift */; };
 		D3E28D1B29A69FF700FF8952 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1A29A69FF700FF8952 /* Constants.swift */; };
 		D3E28D1D29A6A47800FF8952 /* CKRecord+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1C29A6A47800FF8952 /* CKRecord+Ext.swift */; };
+		D3E28D1F29A6A7FD00FF8952 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1E29A6A7FD00FF8952 /* AlertItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,7 @@
 		D3E28D1829A69F0500FF8952 /* CloudKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloudKitManager.swift; sourceTree = "<group>"; };
 		D3E28D1A29A69FF700FF8952 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D3E28D1C29A6A47800FF8952 /* CKRecord+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKRecord+Ext.swift"; sourceTree = "<group>"; };
+		D3E28D1E29A6A7FD00FF8952 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +185,7 @@
 				D3B9B29E277F8291008FECFB /* Extensions */,
 				D3E28D1829A69F0500FF8952 /* CloudKitManager.swift */,
 				D3E28D1A29A69FF700FF8952 /* Constants.swift */,
+				D3E28D1E29A6A7FD00FF8952 /* AlertItem.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				D3B5DB4F267CE1850074A84D /* AppTabView.swift in Sources */,
 				D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */,
 				D3E28D1929A69F0500FF8952 /* CloudKitManager.swift in Sources */,
+				D3E28D1F29A6A7FD00FF8952 /* AlertItem.swift in Sources */,
 				D3B9B29B277F7E5F008FECFB /* View+Ext.swift in Sources */,
 				D3B9B295277F7ADE008FECFB /* LocationCell.swift in Sources */,
 				D3E28D1D29A6A47800FF8952 /* CKRecord+Ext.swift in Sources */,

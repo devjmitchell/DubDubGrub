@@ -13,7 +13,7 @@ struct LocationCell: View {
 
     var body: some View {
         HStack {
-            Image("default-square-asset")
+            Image(uiImage: location.createSquareImage())
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80, height: 80)
@@ -35,7 +35,8 @@ struct LocationCell: View {
                     AvatarView(size: 35)
                 }
             }
-            .padding(.leading)
+//            .padding(.leading)
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
         }
     }
 }

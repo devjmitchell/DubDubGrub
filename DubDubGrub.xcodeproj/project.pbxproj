@@ -31,6 +31,7 @@
 		D3E28D1F29A6A7FD00FF8952 /* AlertItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1E29A6A7FD00FF8952 /* AlertItem.swift */; };
 		D3E28D2229A6AD2B00FF8952 /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2129A6AD2B00FF8952 /* LocationMapViewModel.swift */; };
 		D3E28D2529A7D2FF00FF8952 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2429A7D2FF00FF8952 /* LocationManager.swift */; };
+		D3E28D2729A7DD6D00FF8952 /* CKAsset+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2629A7DD6D00FF8952 /* CKAsset+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		D3E28D1E29A6A7FD00FF8952 /* AlertItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertItem.swift; sourceTree = "<group>"; };
 		D3E28D2129A6AD2B00FF8952 /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		D3E28D2429A7D2FF00FF8952 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		D3E28D2629A7DD6D00FF8952 /* CKAsset+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 				D3B5DB4C267CE1240074A84D /* Color+Ext.swift */,
 				D3B9B29A277F7E5F008FECFB /* View+Ext.swift */,
 				D3E28D1C29A6A47800FF8952 /* CKRecord+Ext.swift */,
+				D3E28D2629A7DD6D00FF8952 /* CKAsset+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 				D3B9B295277F7ADE008FECFB /* LocationCell.swift in Sources */,
 				D3E28D1D29A6A47800FF8952 /* CKRecord+Ext.swift in Sources */,
 				D3E28D2529A7D2FF00FF8952 /* LocationManager.swift in Sources */,
+				D3E28D2729A7DD6D00FF8952 /* CKAsset+Ext.swift in Sources */,
 				D3B9B29D277F811F008FECFB /* DDGButton.swift in Sources */,
 				D3B9B297277F7B58008FECFB /* AvatarView.swift in Sources */,
 				D3B5DB4D267CE1240074A84D /* Color+Ext.swift in Sources */,

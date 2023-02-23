@@ -32,6 +32,9 @@
 		D3E28D2229A6AD2B00FF8952 /* LocationMapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2129A6AD2B00FF8952 /* LocationMapViewModel.swift */; };
 		D3E28D2529A7D2FF00FF8952 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2429A7D2FF00FF8952 /* LocationManager.swift */; };
 		D3E28D2729A7DD6D00FF8952 /* CKAsset+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2629A7DD6D00FF8952 /* CKAsset+Ext.swift */; };
+		D3E28D2929A7EA3500FF8952 /* OnboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2829A7EA3500FF8952 /* OnboardView.swift */; };
+		D3E28D2B29A7EBA200FF8952 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2A29A7EBA200FF8952 /* LogoView.swift */; };
+		D3E28D2E29A7EFA900FF8952 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +66,9 @@
 		D3E28D2129A6AD2B00FF8952 /* LocationMapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapViewModel.swift; sourceTree = "<group>"; };
 		D3E28D2429A7D2FF00FF8952 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		D3E28D2629A7DD6D00FF8952 /* CKAsset+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CKAsset+Ext.swift"; sourceTree = "<group>"; };
+		D3E28D2829A7EA3500FF8952 /* OnboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardView.swift; sourceTree = "<group>"; };
+		D3E28D2A29A7EBA200FF8952 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
+		D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +161,7 @@
 				D3B5DB52267CE1EB0074A84D /* LocationListView.swift */,
 				D3B5DB712682338F0074A84D /* LocationDetailView.swift */,
 				D3B5DB54267CE1FD0074A84D /* ProfileView.swift */,
+				D3E28D2829A7EA3500FF8952 /* OnboardView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -170,8 +177,9 @@
 		D3B9B2A2277F8325008FECFB /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				D3E28D2C29A7EF9B00FF8952 /* Buttons */,
 				D3B9B296277F7B58008FECFB /* AvatarView.swift */,
-				D3B9B29C277F811F008FECFB /* DDGButton.swift */,
+				D3E28D2A29A7EBA200FF8952 /* LogoView.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -213,6 +221,15 @@
 				D3E28D2429A7D2FF00FF8952 /* LocationManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		D3E28D2C29A7EF9B00FF8952 /* Buttons */ = {
+			isa = PBXGroup;
+			children = (
+				D3B9B29C277F811F008FECFB /* DDGButton.swift */,
+				D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */,
+			);
+			path = Buttons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,12 +314,15 @@
 				D3B5DB4F267CE1850074A84D /* AppTabView.swift in Sources */,
 				D3B5DB55267CE1FD0074A84D /* ProfileView.swift in Sources */,
 				D3E28D1929A69F0500FF8952 /* CloudKitManager.swift in Sources */,
+				D3E28D2B29A7EBA200FF8952 /* LogoView.swift in Sources */,
+				D3E28D2E29A7EFA900FF8952 /* XDismissButton.swift in Sources */,
 				D3E28D1F29A6A7FD00FF8952 /* AlertItem.swift in Sources */,
 				D3B9B29B277F7E5F008FECFB /* View+Ext.swift in Sources */,
 				D3B9B295277F7ADE008FECFB /* LocationCell.swift in Sources */,
 				D3E28D1D29A6A47800FF8952 /* CKRecord+Ext.swift in Sources */,
 				D3E28D2529A7D2FF00FF8952 /* LocationManager.swift in Sources */,
 				D3E28D2729A7DD6D00FF8952 /* CKAsset+Ext.swift in Sources */,
+				D3E28D2929A7EA3500FF8952 /* OnboardView.swift in Sources */,
 				D3B9B29D277F811F008FECFB /* DDGButton.swift in Sources */,
 				D3B9B297277F7B58008FECFB /* AvatarView.swift in Sources */,
 				D3B5DB4D267CE1240074A84D /* Color+Ext.swift in Sources */,

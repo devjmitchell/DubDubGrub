@@ -36,6 +36,7 @@
 		D3E28D2B29A7EBA200FF8952 /* LogoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2A29A7EBA200FF8952 /* LogoView.swift */; };
 		D3E28D2E29A7EFA900FF8952 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */; };
 		D3E28D3129A90EB300FF8952 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D3029A90EB300FF8952 /* PhotoPicker.swift */; };
+		D3E28D3329A91DAB00FF8952 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D3229A91DAB00FF8952 /* UIImage+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +72,7 @@
 		D3E28D2A29A7EBA200FF8952 /* LogoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoView.swift; sourceTree = "<group>"; };
 		D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		D3E28D3029A90EB300FF8952 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
+		D3E28D3229A91DAB00FF8952 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				D3B9B29A277F7E5F008FECFB /* View+Ext.swift */,
 				D3E28D1C29A6A47800FF8952 /* CKRecord+Ext.swift */,
 				D3E28D2629A7DD6D00FF8952 /* CKAsset+Ext.swift */,
+				D3E28D3229A91DAB00FF8952 /* UIImage+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				D3E28D2729A7DD6D00FF8952 /* CKAsset+Ext.swift in Sources */,
 				D3E28D2929A7EA3500FF8952 /* OnboardView.swift in Sources */,
 				D3B9B29D277F811F008FECFB /* DDGButton.swift in Sources */,
+				D3E28D3329A91DAB00FF8952 /* UIImage+Ext.swift in Sources */,
 				D3B9B297277F7B58008FECFB /* AvatarView.swift in Sources */,
 				D3B5DB4D267CE1240074A84D /* Color+Ext.swift in Sources */,
 			);

@@ -37,6 +37,7 @@
 		D3E28D2E29A7EFA900FF8952 /* XDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */; };
 		D3E28D3129A90EB300FF8952 /* PhotoPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D3029A90EB300FF8952 /* PhotoPicker.swift */; };
 		D3E28D3329A91DAB00FF8952 /* UIImage+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D3229A91DAB00FF8952 /* UIImage+Ext.swift */; };
+		D3E28D3629AD1CE700FF8952 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D3529AD1CE700FF8952 /* ProfileViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		D3E28D2D29A7EFA900FF8952 /* XDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XDismissButton.swift; sourceTree = "<group>"; };
 		D3E28D3029A90EB300FF8952 /* PhotoPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoPicker.swift; sourceTree = "<group>"; };
 		D3E28D3229A91DAB00FF8952 /* UIImage+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Ext.swift"; sourceTree = "<group>"; };
+		D3E28D3529AD1CE700FF8952 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,11 +163,11 @@
 		D3B9B2A0277F82AF008FECFB /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				D3E28D3429AD1CD600FF8952 /* ProfileView */,
 				D3E28D2029A6AD0C00FF8952 /* LocationMapView */,
 				D3B5DB4E267CE1850074A84D /* AppTabView.swift */,
 				D3B5DB52267CE1EB0074A84D /* LocationListView.swift */,
 				D3B5DB712682338F0074A84D /* LocationDetailView.swift */,
-				D3B5DB54267CE1FD0074A84D /* ProfileView.swift */,
 				D3E28D2829A7EA3500FF8952 /* OnboardView.swift */,
 			);
 			path = Screens;
@@ -246,6 +248,15 @@
 			path = "UIKit Components";
 			sourceTree = "<group>";
 		};
+		D3E28D3429AD1CD600FF8952 /* ProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				D3B5DB54267CE1FD0074A84D /* ProfileView.swift */,
+				D3E28D3529AD1CE700FF8952 /* ProfileViewModel.swift */,
+			);
+			path = ProfileView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -321,6 +332,7 @@
 				D3B5DB51267CE1C00074A84D /* LocationMapView.swift in Sources */,
 				D3E28D2229A6AD2B00FF8952 /* LocationMapViewModel.swift in Sources */,
 				D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */,
+				D3E28D3629AD1CE700FF8952 /* ProfileViewModel.swift in Sources */,
 				D3E28D1629A575C400FF8952 /* MockData.swift in Sources */,
 				D3B5DB722682338F0074A84D /* LocationDetailView.swift in Sources */,
 				D3E28D1429A5741900FF8952 /* DDGProfile.swift in Sources */,

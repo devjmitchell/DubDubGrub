@@ -81,7 +81,7 @@ final class CloudKitManager {
         var checkedInProfiles: [CKRecord.ID: [DDGProfile]] = [:]
 
         operation.recordFetchedBlock = { record in
-            // Build our dictionary
+
             let profile = DDGProfile(record: record)
 
             guard let locationReference = profile.isCheckedIn else { return }

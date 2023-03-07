@@ -24,8 +24,7 @@ struct OnboardView: View {
 
             Spacer()
 
-            LogoView(frameWidth: 250)
-                .padding(.bottom)
+            LogoView(frameWidth: 250).padding(.bottom)
 
             VStack(alignment: .leading, spacing: 32) {
                 OnboardInfoView(imageName: "building.2.crop.circle",

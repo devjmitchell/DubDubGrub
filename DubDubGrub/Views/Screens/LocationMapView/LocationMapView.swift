@@ -9,6 +9,7 @@ import MapKit
 import SwiftUI
 
 struct LocationMapView: View {
+
     @EnvironmentObject private var locationManager: LocationManager
     @StateObject private var viewModel = LocationMapViewModel()
 
@@ -16,8 +17,7 @@ struct LocationMapView: View {
         ZStack {
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: locationManager.locations) { location in
                 MapAnnotation(coordinate: location.location.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.75)) {
-                    DDGAnnotation(location: location,
-                                  number: viewModel.checkedInProfiles[location.id] ?? 0)
+                    DDGAnnotation(location: location, number: viewModel.checkedInProfiles[location.id] ?? 0)
                         .onTapGesture {
                             locationManager.selectedLocation = location
                             viewModel.isShowingDetailView = true
@@ -36,9 +36,7 @@ struct LocationMapView: View {
         .sheet(isPresented: $viewModel.isShowingDetailView) {
             NavigationView {
                 LocationDetailView(viewModel: LocationDetailViewModel(location: locationManager.selectedLocation!))
-                    .toolbar {
-                        Button("Dismiss", action: { viewModel.isShowingDetailView = false })
-                    }
+                    .toolbar { Button("Dismiss", action: { viewModel.isShowingDetailView = false }) }
             }
             .accentColor(.brandPrimary)
         }
@@ -46,10 +44,7 @@ struct LocationMapView: View {
             Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
         })
         .onAppear {
-            if locationManager.locations.isEmpty {
-                viewModel.getLocations(for: locationManager)
-            }
-
+            if locationManager.locations.isEmpty { viewModel.getLocations(for: locationManager) }
             viewModel.getCheckedInCounts()
         }
     }

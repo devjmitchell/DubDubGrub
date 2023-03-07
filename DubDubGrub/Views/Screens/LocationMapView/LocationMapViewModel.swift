@@ -16,6 +16,7 @@ final class LocationMapViewModel: ObservableObject {
     @Published var region = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 37.331516, longitude: -121.891054),
                                                span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
 
+
     func getLocations(for locationManager: LocationManager) {
         CloudKitManager.shared.getLocations { [self] result in
             DispatchQueue.main.async {
@@ -28,6 +29,7 @@ final class LocationMapViewModel: ObservableObject {
             }
         }
     }
+
 
     func getCheckedInCounts() {
         CloudKitManager.shared.getCheckedInProfilesCount { result in

@@ -34,13 +34,14 @@ struct LocationDetailView: View {
                             viewModel.getDirectionsToLocation()
                         } label: {
                             LocationActionButton(color: .brandPrimary, imageName: "location.fill")
-                                .accessibilityLabel(Text("Get directions"))
                         }
+                        .accessibilityLabel(Text("Get directions"))
 
                         Link(destination: URL(string: viewModel.location.websiteURL)!, label: {
                             LocationActionButton(color: .brandPrimary, imageName: "network")
-                                .accessibilityLabel(Text("Go to website"))
                         })
+                        .accessibilityRemoveTraits(.isButton)
+                        .accessibilityLabel(Text("Go to website"))
 
                         Button {
                             viewModel.callLocation()
@@ -83,9 +84,11 @@ struct LocationDetailView: View {
                                 ForEach(viewModel.checkedInProfiles) { profile in
                                     FirstNameAvatarView(profile: profile)
                                         .accessibilityElement(children: .ignore)
+                                        .accessibilityAddTraits(.isButton)
+                                        .accessibilityHint(Text("Show's \(profile.firstName) profile pop up."))
                                         .accessibilityLabel(Text("\(profile.firstName) \(profile.lastName)"))
                                         .onTapGesture {
-                                            viewModel.isShowingProfileModal = true
+                                            viewModel.selectedProfile = profile
                                         }
                                 }
                             })
@@ -97,6 +100,7 @@ struct LocationDetailView: View {
 
                 Spacer()
             }
+//            .accessibilityHidden(viewModel.isShowingProfileModal) // this was Sean's solution to `.accessibilityAddTraits(.isModal)` not working before... but it works now, so I won't use this line
 
             if viewModel.isShowingProfileModal {
                 Color(.systemBackground)
@@ -105,9 +109,11 @@ struct LocationDetailView: View {
 //                    .transition(.opacity)
                     .transition(AnyTransition.opacity.animation(.easeOut(duration: 0.35)))
                     .zIndex(1)
+                    .accessibilityHidden(true)
 
                 ProfileModalView(isShowingProfileModal: $viewModel.isShowingProfileModal,
-                                 profile: DDGProfile(record: MockData.profile))
+                                 profile: viewModel.selectedProfile!)
+                .accessibilityAddTraits(.isModal)
                 .transition(.opacity.combined(with: .slide))
                 .animation(.easeOut)
                 .zIndex(2)

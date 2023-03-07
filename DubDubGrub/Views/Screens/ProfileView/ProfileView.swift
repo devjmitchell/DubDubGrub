@@ -59,7 +59,6 @@ struct ProfileView: View {
 
                     TextEditor(text: $viewModel.bio)
                         .frame(height: 100)
-                        .padding()
                         .overlay(RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.secondary, lineWidth: 1))
                 }
@@ -78,6 +77,7 @@ struct ProfileView: View {
             if viewModel.isLoading { LoadingView() }
         }
         .navigationTitle("Profile")
+        .navigationBarTitleDisplayMode(DeviceTypes.isiPhone8Standard ? .inline : .automatic)
         .toolbar {
             Button {
                 dismissKeyboard()

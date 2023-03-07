@@ -10,6 +10,7 @@ import SwiftUI
 struct LocationDetailView: View {
 
     @ObservedObject var viewModel: LocationDetailViewModel
+    @Environment(\.sizeCategory) var sizeCategory
     
     var body: some View {
         ZStack {
@@ -80,7 +81,7 @@ struct LocationDetailView: View {
                             .padding(.top, 30)
                     } else {
                         ScrollView {
-                            LazyVGrid(columns: viewModel.columns, content: {
+                            LazyVGrid(columns: viewModel.determineColumns(for: sizeCategory), content: {
                                 ForEach(viewModel.checkedInProfiles) { profile in
                                     FirstNameAvatarView(profile: profile)
                                         .accessibilityElement(children: .ignore)
@@ -136,20 +137,11 @@ struct LocationDetailView_Previews: PreviewProvider {
         NavigationView {
             LocationDetailView(viewModel: LocationDetailViewModel(location: DDGLocation(record: MockData.chipotle)))
         }
-        .environment(\.sizeCategory, .extraSmall)
-
-        NavigationView {
-            LocationDetailView(viewModel: LocationDetailViewModel(location: DDGLocation(record: MockData.chipotle)))
-        }
-
-        NavigationView {
-            LocationDetailView(viewModel: LocationDetailViewModel(location: DDGLocation(record: MockData.chipotle)))
-        }
         .preferredColorScheme(.dark)
         .environment(\.sizeCategory, .extraExtraLarge)
 
         NavigationView {
-            LocationDetailView(viewModel: LocationDetailViewModel(location: DDGLocation(record: MockData.chipotle)))
+            LocationDetailView(viewModel: LocationDetailViewModel(location: DDGLocation(record: MockData.chipotle))).embedInScrollView()
         }
         .environment(\.sizeCategory, .accessibilityExtraExtraExtraLarge)
     }
@@ -177,11 +169,13 @@ struct LocationActionButton: View {
 
 struct FirstNameAvatarView: View {
 
+    @Environment(\.sizeCategory) var sizeCategory
     var profile: DDGProfile
 
     var body: some View {
         VStack {
-            AvatarView(image: profile.createAvatarImage(), size: 64)
+            AvatarView(image: profile.createAvatarImage(),
+                       size: sizeCategory >= .accessibilityMedium ? 100 : 64)
             
             Text(profile.firstName)
                 .bold()
@@ -218,9 +212,8 @@ struct DescriptionView: View {
     
     var body: some View {
         Text(text)
-            .lineLimit(3)
             .minimumScaleFactor(0.75)
-            .frame(height: 70)
+            .fixedSize(horizontal: false, vertical: true)
             .padding(.horizontal)
     }
 }

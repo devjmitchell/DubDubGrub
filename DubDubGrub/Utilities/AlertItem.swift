@@ -12,6 +12,10 @@ struct AlertItem: Identifiable {
     let title: Text
     let message: Text
     let dismissButton: Alert.Button
+
+    var alert: Alert {
+        Alert(title: title, message: message, dismissButton: dismissButton)
+    }
 }
 
 struct AlertContext {
@@ -32,6 +36,10 @@ struct AlertContext {
     static let locationDisabled = AlertItem(title: Text("Locations Service Disabled"),
                                             message: Text("Your phone's location services are disabled. To change that go to your phone's Settings > Privacy > Location Services"),
                                             dismissButton: .default(Text("Ok")))
+
+    static let checkedInCount = AlertItem(title: Text("Server Error"),
+                                          message: Text("Unable to get the number of people checked into each location. Please check your internet connection and try again."),
+                                          dismissButton: .default(Text("Ok")))
 
     // MARK: - ProfileView Errors
     static let invalidProfile = AlertItem(title: Text("Invalid Profile"),

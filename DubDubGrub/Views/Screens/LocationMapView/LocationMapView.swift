@@ -15,11 +15,11 @@ struct LocationMapView: View {
     @Environment(\.sizeCategory) var sizeCategory
 
     var body: some View {
-        ZStack {
+        ZStack(alignment: .top) {
+
             Map(coordinateRegion: $viewModel.region, showsUserLocation: true, annotationItems: locationManager.locations) { location in
                 MapAnnotation(coordinate: location.location.coordinate, anchorPoint: CGPoint(x: 0.5, y: 0.75)) {
                     DDGAnnotation(location: location, number: viewModel.checkedInProfiles[location.id] ?? 0)
-                        .accessibilityLabel(Text("Map Pin \(location.name) \(viewModel.checkedInProfiles[location.id, default: 0]) people checked in."))
                         .onTapGesture {
                             locationManager.selectedLocation = location
                             viewModel.isShowingDetailView = true
@@ -29,12 +29,7 @@ struct LocationMapView: View {
             .accentColor(.grubRed)
             .ignoresSafeArea()
 
-            VStack {
-                LogoView(frameWidth: 125)
-                    .shadow(radius: 10)
-//                    .accessibilityHidden(true)
-                Spacer()
-            }
+            LogoView(frameWidth: 125).shadow(radius: 10)
         }
         .sheet(isPresented: $viewModel.isShowingDetailView) {
             NavigationView {
@@ -43,9 +38,7 @@ struct LocationMapView: View {
             }
             .accentColor(.brandPrimary)
         }
-        .alert(item: $viewModel.alertItem, content: { alertItem in
-            Alert(title: alertItem.title, message: alertItem.message, dismissButton: alertItem.dismissButton)
-        })
+        .alert(item: $viewModel.alertItem, content: { $0.alert })
         .onAppear {
             if locationManager.locations.isEmpty { viewModel.getLocations(for: locationManager) }
             viewModel.getCheckedInCounts()
@@ -55,6 +48,6 @@ struct LocationMapView: View {
 
 struct LocationMapView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationMapView()
+        LocationMapView().environmentObject(LocationManager())
     }
 }

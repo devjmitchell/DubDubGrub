@@ -28,6 +28,7 @@
 		D3D0BDE029B26A7600749985 /* DDGAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D0BDDF29B26A7600749985 /* DDGAnnotation.swift */; };
 		D3D2534229B68997007150B3 /* AppTabViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D2534129B68997007150B3 /* AppTabViewModel.swift */; };
 		D3D2534429B7CAC3007150B3 /* ProfileSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D2534329B7CAC3007150B3 /* ProfileSheetView.swift */; };
+		D3D2534629B924E1007150B3 /* HapticManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D2534529B924E1007150B3 /* HapticManager.swift */; };
 		D3E28D1229A5708000FF8952 /* DDGLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1129A5708000FF8952 /* DDGLocation.swift */; };
 		D3E28D1429A5741900FF8952 /* DDGProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1329A5741900FF8952 /* DDGProfile.swift */; };
 		D3E28D1629A575C400FF8952 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E28D1529A575C400FF8952 /* MockData.swift */; };
@@ -73,6 +74,7 @@
 		D3D0BDDF29B26A7600749985 /* DDGAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGAnnotation.swift; sourceTree = "<group>"; };
 		D3D2534129B68997007150B3 /* AppTabViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabViewModel.swift; sourceTree = "<group>"; };
 		D3D2534329B7CAC3007150B3 /* ProfileSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileSheetView.swift; sourceTree = "<group>"; };
+		D3D2534529B924E1007150B3 /* HapticManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HapticManager.swift; sourceTree = "<group>"; };
 		D3E28D1129A5708000FF8952 /* DDGLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGLocation.swift; sourceTree = "<group>"; };
 		D3E28D1329A5741900FF8952 /* DDGProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DDGProfile.swift; sourceTree = "<group>"; };
 		D3E28D1529A575C400FF8952 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 			children = (
 				D3E28D1829A69F0500FF8952 /* CloudKitManager.swift */,
 				D3E28D2429A7D2FF00FF8952 /* LocationManager.swift */,
+				D3D2534529B924E1007150B3 /* HapticManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -379,6 +382,7 @@
 				D3B9B299277F7E1C008FECFB /* CustomModifiers.swift in Sources */,
 				D3B5DB51267CE1C00074A84D /* LocationMapView.swift in Sources */,
 				D3E28D3B29AFC9F500FF8952 /* LocationDetailViewModel.swift in Sources */,
+				D3D2534629B924E1007150B3 /* HapticManager.swift in Sources */,
 				D3E28D2229A6AD2B00FF8952 /* LocationMapViewModel.swift in Sources */,
 				D3B5DB53267CE1EB0074A84D /* LocationListView.swift in Sources */,
 				D3E28D3629AD1CE700FF8952 /* ProfileViewModel.swift in Sources */,

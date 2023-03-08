@@ -31,8 +31,8 @@ extension LocationMapView {
                 }
             }
         }
-        
-        
+
+
         func getCheckedInCounts() {
             CloudKitManager.shared.getCheckedInProfilesCount { result in
                 DispatchQueue.main.async { [self] in

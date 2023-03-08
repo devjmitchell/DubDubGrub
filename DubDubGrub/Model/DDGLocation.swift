@@ -41,13 +41,13 @@ struct DDGLocation: Identifiable {
     }
 
 
-    func createSquareImage() -> UIImage {
+    var squareImage: UIImage {
         guard let asset = squareAsset else { return PlaceholderImage.square }
         return asset.convertToUIImage(in: .square)
     }
 
 
-    func createBannerImage() -> UIImage {
+    var bannerImage: UIImage {
         guard let asset = bannerAsset else { return PlaceholderImage.banner }
         return asset.convertToUIImage(in: .banner)
     }

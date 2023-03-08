@@ -43,7 +43,7 @@ struct ProfileModalView: View {
                 XDismissButton()
             }, alignment: .topTrailing)
 
-            Image(uiImage: profile.createAvatarImage())
+            Image(uiImage: profile.avatarImage)
                 .resizable()
                 .scaledToFill()
                 .frame(width: 110, height: 110)

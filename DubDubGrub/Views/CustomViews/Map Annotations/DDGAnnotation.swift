@@ -19,7 +19,7 @@ struct DDGAnnotation: View {
                     .frame(width: 100, height: 70)
                     .foregroundColor(.brandPrimary)
 
-                Image(uiImage: location.createSquareImage())
+                Image(uiImage: location.squareImage)
                     .resizable()
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())

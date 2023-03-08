@@ -15,7 +15,7 @@ struct LocationDetailView: View {
     var body: some View {
         ZStack {
             VStack(spacing: 16) {
-                BannerImageView(image: viewModel.location.createBannerImage())
+                BannerImageView(image: viewModel.location.bannerImage)
 
                 HStack {
                     AddressView(address: viewModel.location.address)
@@ -181,7 +181,7 @@ struct FirstNameAvatarView: View {
 
     var body: some View {
         VStack {
-            AvatarView(image: profile.createAvatarImage(),
+            AvatarView(image: profile.avatarImage,
                        size: sizeCategory >= .accessibilityMedium ? 100 : 64)
             
             Text(profile.firstName)

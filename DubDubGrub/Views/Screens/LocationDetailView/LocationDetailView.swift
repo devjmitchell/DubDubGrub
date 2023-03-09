@@ -56,53 +56,9 @@ struct LocationDetailView_Previews: PreviewProvider {
 }
 
 
-fileprivate struct LocationActionButton: View {
-
-    var color: Color
-    var imageName: String
-    
-    var body: some View {
-        ZStack {
-            Circle()
-                .foregroundColor(color)
-                .frame(width: 60, height: 60)
-            
-            Image(systemName: imageName)
-                .resizable()
-                .scaledToFit()
-                .foregroundColor(.white)
-                .frame(width: 22, height: 22)
-        }
-    }
-}
-
-
-fileprivate struct FirstNameAvatarView: View {
-
-    @Environment(\.sizeCategory) var sizeCategory
-    var profile: DDGProfile
-
-    var body: some View {
-        VStack {
-            AvatarView(image: profile.avatarImage,
-                       size: sizeCategory >= .accessibilityMedium ? 100 : 64)
-            
-            Text(profile.firstName)
-                .bold()
-                .lineLimit(1)
-                .minimumScaleFactor(0.75)
-        }
-        .accessibilityElement(children: .ignore)
-        .accessibilityAddTraits(.isButton)
-        .accessibilityHint(Text("Show's \(profile.firstName) profile pop up."))
-        .accessibilityLabel(Text("\(profile.firstName) \(profile.lastName)"))
-    }
-}
-
-
 fileprivate struct BannerImageView: View {
     var image: UIImage
-    
+
     var body: some View {
         Image(uiImage: image)
             .resizable()
@@ -116,7 +72,7 @@ fileprivate struct BannerImageView: View {
 fileprivate struct AddressHStack: View {
 
     var address: String
-    
+
     var body: some View {
         HStack {
             Label(address, systemImage: "mappin.and.ellipse")
@@ -132,7 +88,7 @@ fileprivate struct AddressHStack: View {
 
 fileprivate struct DescriptionView: View {
     var text: String
-    
+
     var body: some View {
         Text(text)
             .minimumScaleFactor(0.75)
@@ -185,6 +141,27 @@ fileprivate struct ActionButtonHStack: View {
 }
 
 
+fileprivate struct LocationActionButton: View {
+
+    var color: Color
+    var imageName: String
+
+    var body: some View {
+        ZStack {
+            Circle()
+                .foregroundColor(color)
+                .frame(width: 60, height: 60)
+
+            Image(systemName: imageName)
+                .resizable()
+                .scaledToFit()
+                .foregroundColor(.white)
+                .frame(width: 22, height: 22)
+        }
+    }
+}
+
+
 fileprivate struct GridHeaderTextView: View {
 
     var number: Int
@@ -199,29 +176,6 @@ fileprivate struct GridHeaderTextView: View {
     }
 }
 
-
-fileprivate struct GridEmptyStateTextView: View {
-
-    var body: some View {
-        Text("Nobody's Here 😔")
-            .bold()
-            .font(.title2)
-            .foregroundColor(.secondary)
-            .padding(.top, 30)
-    }
-}
-
-
-fileprivate struct FullScreenBlackTransparencyView: View {
-    var body: some View {
-        Color(.black)
-            .ignoresSafeArea()
-            .opacity(0.9)
-            .transition(AnyTransition.opacity.animation(.easeOut(duration: 0.35)))
-            .zIndex(1)
-            .accessibilityHidden(true)
-    }
-}
 
 fileprivate struct AvatarGridView: View {
 
@@ -245,5 +199,52 @@ fileprivate struct AvatarGridView: View {
 
             if viewModel.isLoading { LoadingView() }
         }
+    }
+}
+
+
+fileprivate struct GridEmptyStateTextView: View {
+
+    var body: some View {
+        Text("Nobody's Here 😔")
+            .bold()
+            .font(.title2)
+            .foregroundColor(.secondary)
+            .padding(.top, 30)
+    }
+}
+
+
+fileprivate struct FirstNameAvatarView: View {
+
+    @Environment(\.sizeCategory) var sizeCategory
+    var profile: DDGProfile
+
+    var body: some View {
+        VStack {
+            AvatarView(image: profile.avatarImage,
+                       size: sizeCategory >= .accessibilityMedium ? 100 : 64)
+
+            Text(profile.firstName)
+                .bold()
+                .lineLimit(1)
+                .minimumScaleFactor(0.75)
+        }
+        .accessibilityElement(children: .ignore)
+        .accessibilityAddTraits(.isButton)
+        .accessibilityHint(Text("Show's \(profile.firstName) profile pop up."))
+        .accessibilityLabel(Text("\(profile.firstName) \(profile.lastName)"))
+    }
+}
+
+
+fileprivate struct FullScreenBlackTransparencyView: View {
+    var body: some View {
+        Color(.black)
+            .ignoresSafeArea()
+            .opacity(0.9)
+            .transition(AnyTransition.opacity.animation(.easeOut(duration: 0.35)))
+            .zIndex(1)
+            .accessibilityHidden(true)
     }
 }

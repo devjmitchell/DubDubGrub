@@ -74,7 +74,6 @@ final class CloudKitManager {
 
 
     func getCheckedInProfilesDictionary(completed: @escaping (Result<[CKRecord.ID: [DDGProfile]], Error>) -> Void) {
-        print("✅ Network call fired off")
         let predicate = NSPredicate(format: "isCheckedInNilCheck == 1")
         let query = CKQuery(recordType: RecordType.profile, predicate: predicate)
         let operation = CKQueryOperation(query: query)
@@ -95,15 +94,11 @@ final class CloudKitManager {
             }
 
             if let cursor = cursor {
-                print("1️⃣ Initial Cursor is not nil - \(cursor)")
-                print("👨‍👩‍👧‍👦 Current Dictionary - \(checkedInProfiles)")
                 self.continueWithCheckedInProfilesDict(cursor: cursor, dictionary: checkedInProfiles) { result in
                     switch result {
                     case .success(let profiles):
-                        print("😀1️⃣ Initial Cursor Success - Dictionary - \(profiles)")
                         completed(.success(profiles))
                     case .failure(let error):
-                        print("1️⃣⭕️ Initial Error \(error)")
                         completed(.failure(error))
                     }
                 }
@@ -137,15 +132,11 @@ final class CloudKitManager {
             }
 
             if let cursor = cursor {
-                print("⭕️ Recursive Cursor is not nil - \(cursor)")
-                print("👨‍👩‍👧‍👦 Current Dictionary - \(checkedInProfiles)")
                 self.continueWithCheckedInProfilesDict(cursor: cursor, dictionary: checkedInProfiles) { result in
                     switch result {
                     case .success(let profiles):
-                        print("😀⭕️ Recursive Success - Dictionary - \(profiles)")
                         completed(.success(profiles))
                     case .failure(let error):
-                        print("❌⭕️ Recursive Error \(error)")
                         completed(.failure(error))
                     }
                 }

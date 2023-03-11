@@ -45,8 +45,7 @@ struct LocationCell: View {
                     }
                 }
             }
-//            .padding(.leading)
-            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+            .padding(.leading)
         }
     }
 }

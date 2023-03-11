@@ -5,6 +5,7 @@
 //  Created by Jason Mitchell on 6/18/21.
 //
 
+import CoreLocationUI
 import MapKit
 import SwiftUI
 
@@ -36,6 +37,17 @@ struct LocationMapView: View {
                 viewModel.createLocationDetailView(for: locationManager.selectedLocation!, in: dynamicTypeSize)
                     .toolbar { Button("Dismiss", action: { viewModel.isShowingDetailView = false }) }
             }
+        }
+        .overlay(alignment: .bottomLeading) {
+            LocationButton(.currentLocation) {
+                viewModel.requestAllowOnceLocationPermission()
+            }
+            .foregroundColor(.white)
+            .symbolVariant(.fill)
+            .tint(.grubRed)
+            .labelStyle(.iconOnly)
+            .clipShape(Circle())
+            .padding(EdgeInsets(top: 0, leading: 20, bottom: 40, trailing: 0))
         }
         .alert(item: $viewModel.alertItem, content: { $0.alert })
         .onAppear {

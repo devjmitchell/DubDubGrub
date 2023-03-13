@@ -65,8 +65,15 @@ struct ProfileView: View {
                         }
                     }
 
-                    BioTextEditor(text: $viewModel.bio)
+                    TextField("Enter your bio", text: $viewModel.bio, axis: .vertical)
+                        .textFieldStyle(.roundedBorder)
+                        .lineLimit(3...6)
                         .focused($focusedTextField, equals: .bio)
+                        .accessibilityHint(Text("This TextField is for your bio and has a 100 character maximum."))
+
+                    // replaced this with the new Multiline TextField above (but might not keep, because our BioTextEditor looked good, too)
+//                    BioTextEditor(text: $viewModel.bio)
+//                        .focused($focusedTextField, equals: .bio)
                 }
                 .padding(.horizontal, 20)
 
@@ -178,14 +185,14 @@ fileprivate struct CheckOutButton: View {
 }
 
 
-fileprivate struct BioTextEditor: View {
-
-    var text: Binding<String>
-
-    var body: some View {
-        TextEditor(text: text)
-            .frame(height: 100)
-            .overlay { RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1) }
-            .accessibilityHint(Text("This TextField is for your bio and has a 100 character maximum."))
-    }
-}
+//fileprivate struct BioTextEditor: View {
+//
+//    var text: Binding<String>
+//
+//    var body: some View {
+//        TextEditor(text: text)
+//            .frame(height: 100)
+//            .overlay { RoundedRectangle(cornerRadius: 8).stroke(Color.secondary, lineWidth: 1) }
+//            .accessibilityHint(Text("This TextField is for your bio and has a 100 character maximum."))
+//    }
+//}

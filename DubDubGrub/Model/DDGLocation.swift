@@ -8,7 +8,7 @@
 import CloudKit
 import UIKit
 
-struct DDGLocation: Identifiable {
+struct DDGLocation: Identifiable, Hashable {
     static let kName = "name"
     static let kDescription = "description"
     static let kSquareAsset = "squareAsset"

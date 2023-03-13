@@ -19,7 +19,7 @@ struct AppTabView: View {
             LocationListView()
                 .tabItem { Label("Locations", systemImage: "building") }
             
-            NavigationView { ProfileView() }
+            NavigationStack { ProfileView() }
                 .tabItem { Label("Profile", systemImage: "person") }
         }
         .task {
